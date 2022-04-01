@@ -1,1 +1,0 @@
-export { WidgetPageWithBottom } from './WidgetPageWithBottom';

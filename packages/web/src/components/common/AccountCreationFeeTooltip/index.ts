@@ -1,1 +1,0 @@
-export { AccountCreationFeeTooltip } from './AccountCreationFeeTooltip';

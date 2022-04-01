@@ -1,1 +1,0 @@
-export { ScrollFix } from './ScrollFix';

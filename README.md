@@ -1,117 +1,56 @@
-# P2P Wallet Prototype
+# p2p-wallet-android
 
-![](https://cdn.discordapp.com/attachments/737610668726812763/777332772540645376/wallets_web2x.png)
+![](https://cdn.discordapp.com/attachments/737610668726812763/777332771600990259/wallets_android2x.png)
 
-A Open Source Browser Based Solana Wallet. Version "0.1a Wormhole Hackathon"
-Built on top of [Solana](https://github.com/solana-labs), [ProjectSerum](https://github.com/project-serum)
+## Getting Started
+- Download the latest Android Studio.
+- Clone this repository.
+- In Android Studio, create an Android Virtual Device (AVD) that the emulator can use to install and run your app.
+- In the toolbar, select your app from the run/debug configurations drop-down menu.
+- From the target device drop-down menu, select the AVD that you want to run your app on.
+- Click Run.
 
-Live demo available at [github-pages](https://p2p-org.github.io/p2p-wallet-web/)
-
-P2P Wallet Prototype supports a number features such as:
-
-- Create/Access Wallet with seed. Your private keys are only stored on your current computer or device.
-- Create Wrapped tokens addresses
-- Displaying balances of SOL token and Wrapped tokens
-- Displaying the value of assets in dollars.
-- Send and receive SOL token and Wrapped tokens
-- Transaction history
-- Transaction details
-- HD (BIP32,BIP39) support
-- QR code generation
-- Nice UI
-
-### Further development:
-
-- One-tap access to swap assets
-- Improving security
-- Wallet Connect integration
-- Send/Receive Wrapped tokens to/from Ethereum Blockchain
-- DeFi support
-
-# Project overview
-
-We use `lerna` to manage packages which are residing under the `packages` directory. To lint and format our code, such tools as `eslint` and `prettier` are used.
+### API Keys requirements
+For app to run properly you need to create and fill some 3rd party APIs keys with your own values. 
+1. Create `apikey.properties` file at the project root directory. `*.properties` file type is a file with key-value text that Gradle parses on project build
+2. The contents of `apikey.properties` should be the following:
+```groovy
+intercomApiKey="your_key"
+intercomAppId="your_key"
+rpcPoolApiKey="your_key"
+moonpayKey="your_key"
+comparePublicKey="your_key"
+amplitudeKey="your_key"
 ```
-p2p-wallet-web
-├── .github
-├── .husky
-├── node_modules
-├── src
-└── packages
-    ├── core
-    ├── eslint-config
-    ├── eslint-config-react
-    ├── example
-    ├── sail
-    ├── tsconfig
-    ├── ui
-    └── web
-```
+Where:
+`intercomApiKey`, `intercomAppId` - API keys for [Intercom](https://www.intercom.com) library
+`rpcPoolApiKey` - API key for p2p.rpcpool.com
+`moonpayKey` - API key for api.moonpay.com
+`comparePublicKey` - API key cryptocompare.com
+`amplitudeKey` - API key for [Amplitude](https://developers.amplitude.com/docs/android) library
 
-Packages bear the following purposes:
-- `core`          : all general-purpose logic, including type definitions, app-wide context providers, etc.
-- `eslint-config` : `eslint` general configuration
-- `eslint-config-react` : `eslint` configuration for React-specific code
-- `sail`     : a collection of custom hooks and other application-wide logic
-- `tsconfig` : Typescript configurations
-- `ui`       : a collection of commonly used components and `storybook`   to view them in the browser.
-- `web`      : wallet web interface
+## Main stack
 
+### Libraries
+- **Koin** - A pragmatic lightweight dependency injection (DI) framework for Kotlin developers. Written in pure Kotlin using functional resolution only: no proxy, no code generation, no reflection.
+- **Coroutines** - A coroutine is a concurrency design pattern that you can use on Android to simplify code that executes asynchronously. Coroutines were added to Kotlin in version 1.3 and are based on established concepts from other languages.
+- **Retrofit** - Retrofit is a REST Client for Java and Android. It makes it relatively easy to retrieve and upload JSON (or other structured data) via a REST based webservice.
+- **GSON** - Gson is a Java library that can be used to convert classes into their JSON representation. It can also be used to convert a JSON string to an equivalent Kotlin object.
+- **Room** - The Room persistence library provides an abstraction layer over SQLite to allow for more robust database access while harnessing the full power of SQLite.
+- **Glide** - Glide is a fast and efficient open source media management and image loading framework for Android that wraps media decoding, memory and disk caching, and resource pooling into a simple and easy to use interface.
 
-## Build it yourself
+### Architecture
+- **MVP** - The MVP (Model-View-Presenter) pattern helps to completely separate the business and presentation logic from the UI, and the business logic and UI can be clearly separated for easier testing and easier maintenance.
+- **Clean Architecture** - Clean Architecture combines a group of practices that produce systems with the following characteristics: Testable; UI-independent (the UI can easily be changed without changing the system); Independent of databases, frameworks, external agencies, and libraries.
 
-If you'd rather build the application yourself, please ensure you have nodejs/npm/yarn already installed locally.
+## Contributing
+The best way to submit feedback and report bugs is to open a GitHub issue. Please be sure to include:
+- your operating system
+- device
+- version number
+- steps to reproduce reported bugs
 
-- Clone the repo 
-
-``` 
-git clone https://github.com/p2p-org/p2p-wallet-web.git
-```
-
-- Install dependencies with `yarn`.
-
-```
-cd p2p-wallet-web
-yarn
-```
-
-- Project uses `lerna` for package management. You will need to build the packages first before starting development.
-
-```
-yarn build
-```
-
-- Rename `.env.development.example` in the `web` package to `.env.development` and fill it with your environmental variables.
-
-```
-cd packages/web
-mv .env.development.example .env.development
-```
-
-- Once packages have been built, you can start the project locally. Open [http://localhost:3000/](http://localhost:3000/) to see it in the browser.
- If having build errors, make sure that your `Node.js` version is at least `v11` or higher .
-
-```
-cd packages/web
-yarn start
-```
-
-- To start storybook change directory to `packages/ui` and start the storybook server. Open [http://localhost:6006/](http://localhost:6006/) to see it in the browser.
-
-```
-cd packages/ui
-yarn storybook
-```
-
-# Development
-
-Install the following extensions in your code editor for linting and ease of work with the code:
-
-- eslint
-- prettier
-- stylelint
-- linaria
-
-# Contributing
-
-The best way to submit feedback and report bugs is to open a GitHub issue. Please be sure to include your operating system, device, version number, and steps to reproduce reported bugs. Keep in mind that all participants will be expected to follow our code of conduct.
+### Code Style
+How to apply:
+1. `Settings / Preferences -> Editor -> Code Style`
+2. In opened window choose `Project` schema.

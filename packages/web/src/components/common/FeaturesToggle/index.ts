@@ -1,1 +1,0 @@
-export { FeaturesToggle } from './FeaturesToggle';

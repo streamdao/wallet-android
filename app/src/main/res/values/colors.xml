@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!--Colors that are not designed-->
+    <color name="colorProgressBackground">#33FFFFFF</color>
+
+    <!--System colors-->
+    <color name="statusBarColor">@android:color/transparent</color>
+    <color name="navigationBarColor">@android:color/transparent</color>
+
+    <!--Error colors-->
+    <color name="systemErrorMain">#F43D3D</color>
+    <color name="systemErrorSecondary">#FD7373</color>
+    <color name="systemErrorBackground">#FEF5F5</color>
+
+    <!--Success colors-->
+    <color name="systemSuccess">#77DB7C</color>
+    <color name="systemSuccessMain">@color/colorGreen</color>
+    <color name="systemSuccessSecondary">#50D756</color>
+    <color name="systemSuccessBackground">#F5FBF5</color>
+
+    <!--Warning colors-->
+    <color name="systemWarningMain">#FFA631</color>
+    <color name="systemWarningBackground">#FFFBF5</color>
+
+    <color name="strokePrimary">#D3D4DE</color>
+    <color name="strokeSecondary">#F6F6F8</color>
+
+    <!--Common Text colors-->
+    <color name="textIconSecondary">#8E8E93</color>
+    <color name="textIconTertiary">#D2D4E5</color>
+    <color name="textIconButtonPrimary">#FFFFFF</color>
+    <color name="textIconPrimary">#202020</color>
+    <color name="textIconLink">#82A5FF</color>
+    <color name="textIconActive">#5887FF</color>
+
+    <!--Common Background colors-->
+    <color name="backgroundPrimary">#FFFFFF</color>
+    <color name="backgroundSecondary">#F6F6F8</color>
+    <color name="backgroundApp">#FBFBFD</color>
+    <color name="backgroundAppStroke">#F2F2F7</color>
+    <color name="backgroundActivePrimary">#EFF3FF</color>
+    <color name="backgroundDisabled">#A3A5BA</color>
+    <color name="backgroundButtonPrimary">#5887FF</color>
+    <color name="backgroundBanner">#D8F3E2</color>
+    <color name="backgroundBannerSecondary">#D7D1FF</color>
+    <color name="colorBackgroundNotification">#404040</color>
+
+    <!--Android Overridden colors-->
+    <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">@color/backgroundDisabled</color>
+
+</resources>

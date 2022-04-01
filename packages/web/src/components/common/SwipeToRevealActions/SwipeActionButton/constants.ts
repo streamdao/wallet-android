@@ -1,1 +1,0 @@
-export const SWIPE_ACTION_BUTTON_SIZE = 66;

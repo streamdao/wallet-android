@@ -1,1 +1,0 @@
-export { Intercom } from './Intercom';
